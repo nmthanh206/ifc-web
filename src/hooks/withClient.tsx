@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 type WithClientProps = {
   children?: React.ReactNode;
 };
-function withClient<T extends WithClientProps>(Component: React.ComponentType<T>) {
+function withClient<T extends WithClientProps>(
+  Component: React.ComponentType<T>,
+) {
   return function ClientOnlyComponent({ children, ...rest }: T) {
     const [isClient, setClient] = useState(false);
 
@@ -11,7 +13,9 @@ function withClient<T extends WithClientProps>(Component: React.ComponentType<T>
       setClient(true);
     }, []);
 
-    return <>{isClient && <Component {...(rest as T)}>{children}</Component>}</>;
+    return (
+      <>{isClient && <Component {...(rest as T)}>{children}</Component>}</>
+    );
   };
 }
 

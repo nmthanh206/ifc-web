@@ -13,6 +13,8 @@
   "dependencies": {
     "@parametricos/bcf-js": "^0.1.3",
     "@reduxjs/toolkit": "^1.8.5",
+    "antd": "^4.22.8",
+    "axios": "^0.27.2",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",

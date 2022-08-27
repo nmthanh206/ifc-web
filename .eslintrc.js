@@ -12,9 +12,9 @@ module.exports = {
   plugins: [
     'eslint-plugin-import',
     'eslint-plugin-import-helpers',
-    'import',
     'prettier',
     'simple-import-sort',
+    'import',
     'tailwindcss',
     '@typescript-eslint',
   ],
@@ -42,7 +42,7 @@ module.exports = {
     ],
     'object-curly-spacing': ['error', 'always'],
     'no-multi-spaces': ['error'],
-    'arrow-body-style': 'error',
+    'arrow-body-style': 'off',
     complexity: ['warn', 20],
     'constructor-super': 'error',
     curly: 'error',
@@ -102,17 +102,17 @@ module.exports = {
     radix: 'error',
     'use-isnan': 'error',
     'valid-typeof': 'off',
-    'import-helpers/order-imports': [
-      'warn',
-      {
-        newlinesBetween: 'always',
-        groups: ['module', '/^@shared/', ['index', 'sibling', 'parent']],
-        alphabetize: {
-          order: 'asc',
-          ignoreCase: true,
-        },
-      },
-    ],
+    // 'import-helpers/order-imports': [
+    //   'warn',
+    //   {
+    //     newlinesBetween: 'always',
+    //     groups: ['module', '/^@shared/', ['index', 'sibling', 'parent']],
+    //     alphabetize: {
+    //       order: 'asc',
+    //       ignoreCase: true,
+    //     },
+    //   },
+    // ],
     'import/newline-after-import': [
       'error',
       {
@@ -134,6 +134,7 @@ module.exports = {
     'default-case': 'off',
     'implicit-arrow-linebreak': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'import/no-named-as-default': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'tailwindcss/classnames-order': 'warn',
     'tailwindcss/enforces-negative-arbitrary-values': 'warn',
@@ -153,12 +154,20 @@ module.exports = {
   },
   env: {
     browser: true,
-    es2022: true,
+    es2021: true,
   },
   globals: {
     window: true,
     document: true,
     localStorage: true,
     fetch: true,
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        paths: ['.'],
+      },
+    },
   },
 };
