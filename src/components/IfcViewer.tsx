@@ -26,7 +26,7 @@ const IfcViewer: React.FC<IfcViewerProp> = ({
             item.modelID,
             item.id,
             true,
-            false
+            false,
          );
          console.log(props);
       }
@@ -71,7 +71,7 @@ const IfcViewer: React.FC<IfcViewerProp> = ({
             }
          }
       };
-      async function loadIfc(url) {
+      async function loadIfc(url: string) {
          const model = await viewer.IFC.loadIfcUrl(url);
          if (!model) return;
          viewer.shadowDropper.renderShadow(model?.modelID);

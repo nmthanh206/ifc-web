@@ -4,7 +4,7 @@ type WithClientProps = {
    children?: React.ReactNode;
 };
 function withClient<T extends WithClientProps>(
-   Component: React.ComponentType<T>
+   Component: React.ComponentType<T>,
 ) {
    return function ClientOnlyComponent({ children, ...rest }: T) {
       const [isClient, setClient] = useState(false);
