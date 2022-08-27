@@ -57,8 +57,7 @@
 // });
 // export const persistor = persistStore(store);
 import { configureStore } from '@reduxjs/toolkit';
-
-import modalReducer from '@/reducers/modalReducer';
+import modalReducer from 'src/redux/reducers/modalReducer';
 
 const store = configureStore({
   reducer: {

@@ -3,11 +3,11 @@ import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import { useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from 'src/store';
+import { RootState } from 'src/redux/store';
+import { useActions } from 'src/redux/useActions';
 import { IfcViewerAPI } from 'web-ifc-viewer';
 
 import ModalCustom from '@/components/Modal';
-import { useActions } from '@/hooks/useActions';
 import { usePosts } from '@/hooks/usePosts';
 
 const IfcViewer = dynamic(() => import('@/components/IfcViewer'), {
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
           onClick={() => {
             action.hide();
           }}
-          className="!bg-red-500"
+          className="!border-red-500 !bg-red-500"
         >
           Hide
         </Button>

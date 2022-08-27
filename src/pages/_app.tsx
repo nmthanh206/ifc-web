@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { Provider } from 'react-redux';
-import store from 'src/store';
+import store from 'src/redux/store';
 
 const queryClient = new QueryClient({
   defaultOptions: {

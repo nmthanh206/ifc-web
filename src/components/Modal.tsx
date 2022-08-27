@@ -1,9 +1,8 @@
 import { Modal } from 'antd';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from 'src/store';
-
-import { useActions } from '@/hooks/useActions';
+import { RootState } from 'src/redux/store';
+import { useActions } from 'src/redux/useActions';
 
 type Props = {};
 
