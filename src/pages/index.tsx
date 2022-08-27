@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { IfcViewerAPI } from "web-ifc-viewer";
 
-const IfcViewer = dynamic(() => import("../components/IfcViewer"), {
+const IfcViewer = dynamic(() => import("@/components/IfcViewer"), {
    ssr: false,
 });
 

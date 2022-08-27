@@ -128,6 +128,8 @@ module.exports = {
       "@typescript-eslint/indent": "off",
       "linebreak-style": "off",
       "default-case": "off",
+      "implicit-arrow-linebreak": "off",
+      "import/no-extraneous-dependencies": "off",
       "@typescript-eslint/no-unused-vars": "warn",
    },
    parserOptions: {
