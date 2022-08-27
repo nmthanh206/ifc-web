@@ -12,6 +12,8 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      {/* {' '}
+      <div className="mt-2 flex bg-red-500">adas</div> */}
       <IfcViewer viewerRef={viewerRef} wasmPath="../../../" />
     </div>
   );
