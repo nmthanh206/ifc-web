@@ -1,7 +1,7 @@
 module.exports = {
    extends: [
       "next/core-web-vitals",
-      "airbnb-base",
+      "airbnb-base",'plugin:prettier/recommended',
       "plugin:import/errors",
       "plugin:import/warnings",
       "plugin:@typescript-eslint/recommended",
@@ -10,7 +10,7 @@ module.exports = {
    plugins: [
       "eslint-plugin-import",
       "eslint-plugin-import-helpers",
-      "import",
+      "import",'prettier',
       "simple-import-sort",
       "@typescript-eslint",
    ],
@@ -120,7 +120,7 @@ module.exports = {
       "consistent-return": "off",
       "no-plusplus": "off",
       "no-await-in-loop": "off",
-      "prettier/prettier": "off",
+      // "prettier/prettier": "off",
       "no-unused-vars": "off",
       "no-param-reassign": "off",
       "import/prefer-default-export": "off",
